@@ -1,1 +1,9 @@
 /* styles go here */
+.formField {
+  display: block;
+  margin: 10px;
+}
+
+.info:not(:last-child) {
+  margin-bottom: 20px;
+}

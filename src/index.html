@@ -13,5 +13,189 @@
   <body>
     <h1>HTML Form</h1>
     <script type="text/javascript" src="./main.js"></script>
+    <form
+      action="https://mate-academy-form-lesson.herokuapp.com/create-application"
+      method="post"
+    >
+      <fieldset class="info">
+        <legend>Enter initial info</legend>
+
+        <label class="formField">
+          Username:
+          <input
+            type="text"
+            name="username"
+            required
+            pattern="\w+"
+            autocomplete="off"
+           >
+        </label>
+
+        <label class="formField">
+          Password:
+          <input
+            type="password"
+            name="password"
+            required
+            minlength="5"
+            maxlength="35"
+          >
+        </label>
+
+        <label class="formField">
+          <input
+            type="checkbox"
+            name="remember"
+            id="remember"
+          >
+          <label for="remember">Remember me</label>
+        </label>
+
+        <label class="formField">
+          <input
+            type="checkbox"
+            name="personalDdata"
+            id="personalData"
+            required
+            checked
+          >
+          <label for="personalData">
+            I agree sharing my personal data
+          </label>
+        </label>
+      </fieldset>
+
+      <fieldset class="info">
+        <legend>Enter personal info</legend>
+
+        <label class="formField">
+          Name
+          <input
+            type="text"
+            name="name"
+            required
+            autocomplete="off"
+          >
+        </label>
+
+        <label class="formField">
+          Surname
+          <input
+            type="text"
+            name="surname"
+            required
+            autocomplete="off"
+          >
+        </label>
+
+        <label class="formField">
+          Email:
+          <input
+            type="email"
+            name="email"
+            required
+            placeholder="email@example.com"
+          >
+        </label>
+
+        <label class="formField">
+          Age
+          <input
+            type="number"
+            name="age"
+            min="1"
+            max="100"
+            placeholder="12"
+          >
+        </label>
+
+        <label class="formField">
+          Today's data
+          <input
+            type="data"
+            name="data"
+            value="yy-mm-dd"
+          >
+        </label>
+
+        <div class="formField">
+          Sex:
+
+          <label>
+            <input
+              type="radio"
+              name="sex"
+              value="m"
+              checked
+            >
+            - man
+          </label>
+
+          <label>
+            <input
+              type="radio"
+              name="sex"
+              value="f"
+            >
+            - woman
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset class="info">
+        <legend>Enter your preferences</legend>
+        <label class="formField">
+          Choose interview time
+          <input
+            type="time"
+            name="time"
+            min="09:00"
+            max="18:00">
+        </label>
+
+        <label class="formField">
+          Choose your favorite colors
+
+          <select name="color" required multiple>
+            <option value="" disabled selected>
+              Choose a color
+            </option>
+            <option value="#f00">Red</option>
+            <option value="#00f">Blue</option>
+            <option value="#0f0">Green</option>
+          </select>
+        </label>
+
+        <div class="formField">
+          Application font size
+
+          <label>
+            <input
+              type="range"
+              name="fontSize"
+              min="10"
+              max="18">
+          </label>
+        </div>
+
+        <label class="formField">
+          Add your interview preferences
+
+          <textarea
+            name="preferences"
+            placeholder="Zoom"
+            cols="30"
+            rows="5"
+         ></textarea>
+        </label>
+      </fieldset>
+
+      <div class="info">
+
+        <button type="reset">Reset data</button>
+        <button type="submit">Create application</button>
+
+      </div>
+    </form>
   </body>
 </html>
