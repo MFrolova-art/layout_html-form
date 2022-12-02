@@ -1,7 +1,7 @@
 /* styles go here */
-.formField {
+.formField:not(:last-child) {
   display: block;
-  margin: 10px;
+  padding-bottom: 10px;
 }
 
 .info:not(:last-child) {

@@ -11,24 +11,75 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <h1>HTML Form</h1>
     <script type="text/javascript" src="./main.js"></script>
     <form
       action="https://mate-academy-form-lesson.herokuapp.com/create-application"
       method="post"
     >
       <fieldset class="info">
-        <legend>Enter initial info</legend>
+        <legend>Personal information</legend>
 
         <label class="formField">
-          Username:
+          Surname:
           <input
             type="text"
-            name="username"
+            name="surname"
             required
-            pattern="\w+"
             autocomplete="off"
-           >
+          >
+        </label>
+
+        <label class="formField">
+          Name:
+          <input
+            type="text"
+            name="name"
+            required
+            autocomplete="off"
+          >
+        </label>
+
+        <label class="formField">
+          How old are You?
+          <input
+            type="number"
+            name="age"
+            min="1"
+            max="100"
+            value="12"
+          >
+        </label>
+
+        <label class="formField">
+          Full date of birth:
+          <input
+            type="date"
+            name="date"
+            value="mm/dd/yyyy"
+          >
+        </label>
+
+        <label class="formField">
+          <label for="term">I accept the term of the agreement</label>
+          <input
+            type="checkbox"
+            name="term"
+            id="term"
+          >
+        </label>
+      </fieldset>
+
+      <fieldset class="info">
+        <legend>Registration</legend>
+
+        <label class="formField">
+          E-mail:
+          <input
+            type="email"
+            name="email"
+            required
+            placeholder="email@example.com"
+          >
         </label>
 
         <label class="formField">
@@ -41,159 +92,101 @@
             maxlength="35"
           >
         </label>
-
-        <label class="formField">
-          <input
-            type="checkbox"
-            name="remember"
-            id="remember"
-          >
-          <label for="remember">Remember me</label>
-        </label>
-
-        <label class="formField">
-          <input
-            type="checkbox"
-            name="personalDdata"
-            id="personalData"
-            required
-            checked
-          >
-          <label for="personalData">
-            I agree sharing my personal data
-          </label>
-        </label>
       </fieldset>
 
       <fieldset class="info">
-        <legend>Enter personal info</legend>
-
-        <label class="formField">
-          Name
-          <input
-            type="text"
-            name="name"
-            required
-            autocomplete="off"
-          >
-        </label>
-
-        <label class="formField">
-          Surname
-          <input
-            type="text"
-            name="surname"
-            required
-            autocomplete="off"
-          >
-        </label>
-
-        <label class="formField">
-          Email:
-          <input
-            type="email"
-            name="email"
-            required
-            placeholder="email@example.com"
-          >
-        </label>
-
-        <label class="formField">
-          Age
-          <input
-            type="number"
-            name="age"
-            min="1"
-            max="100"
-            placeholder="12"
-          >
-        </label>
-
-        <label class="formField">
-          Today's data
-          <input
-            type="data"
-            name="data"
-            value="yy-mm-dd"
-          >
-        </label>
+        <legend>An interesting fact about you!</legend>
 
         <div class="formField">
-          Sex:
+          Do you love cats?
 
           <label>
             <input
               type="radio"
-              name="sex"
-              value="m"
-              checked
+              name="cats"
+              value="yes"
             >
-            - man
+            Yes
           </label>
 
           <label>
             <input
               type="radio"
-              name="sex"
-              value="f"
+              name="cats"
+              value="no"
             >
-            - woman
+            No
           </label>
         </div>
-      </fieldset>
 
-      <fieldset class="info">
-        <legend>Enter your preferences</legend>
         <label class="formField">
-          Choose interview time
+          What is your favorite color?
+
+          <input
+            type="color"
+            id="black"
+            name="black"
+            value="#000"
+          >
+        </label>
+
+        <label class="formField">
+          What time do you go to bed?
           <input
             type="time"
             name="time"
             min="09:00"
-            max="18:00">
+            max="18:00"
+          >
         </label>
 
         <label class="formField">
-          Choose your favorite colors
+          What are your favorite brand of cars?
 
-          <select name="color" required multiple>
-            <option value="" disabled selected>
-              Choose a color
-            </option>
-            <option value="#f00">Red</option>
-            <option value="#00f">Blue</option>
-            <option value="#0f0">Green</option>
+          <select name="carBrand" required multiple>
+            <option value="BMW">BMW</option>
+            <option value="audi">Audi</option>
+            <option value="lada">Lada</option>
           </select>
         </label>
 
-        <div class="formField">
-          Application font size
+        <label>
+          How do you rate our work?
+          <input
+            type="range"
+            name="rate"
+            min="1"
+            max="10"
+          >
+        </label>
+      </fieldset>
 
-          <label>
-            <input
-              type="range"
-              name="fontSize"
-              min="10"
-              max="18">
-          </label>
-        </div>
+      <fieldset class="info">
+        <legend>Additional info</legend>
 
         <label class="formField">
-          Add your interview preferences
+          Comments:
 
           <textarea
-            name="preferences"
-            placeholder="Zoom"
-            cols="30"
-            rows="5"
+            name="comments"
+            cols="20"
+            rows="2"
          ></textarea>
+        </label>
+
+        <label class="formField">
+          Would you recommend us?
+
+          <select name="reccomendation" required>
+            <option value="yes" selected>yes</option>
+            <option value="no">no</option>
+          </select>
         </label>
       </fieldset>
 
       <div class="info">
 
-        <button type="reset">Reset data</button>
-        <button type="submit">Create application</button>
+        <button type="submit">Submit</button>
 
       </div>
     </form>
