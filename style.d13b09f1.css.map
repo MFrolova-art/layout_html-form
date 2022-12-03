@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.css"],"names":[],"mappings":"AACA,4BACE,aAAc,CACd,mBACF,CAEA,uBACE,kBACF","file":"style.d13b09f1.css","sourceRoot":"../src","sourcesContent":["/* styles go here */\n.formField:not(:last-child) {\n  display: block;\n  padding-bottom: 10px;\n}\n\n.info:not(:last-child) {\n  margin-bottom: 20px;\n}\n"]}
